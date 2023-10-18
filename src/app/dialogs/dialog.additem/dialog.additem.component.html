@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>{{titleAccion}} Tecnico</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formItem">
+    <mat-grid-list cols="1" rowHeight="80px">
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Elemento</mat-label>
+          <mat-select formControlName="idItem">
+            <mat-option *ngFor="let item of listItem" [value]="item.idItem">
+              {{item.nameItem}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Sucursal</mat-label>
+          <mat-select formControlName="idBranchOffice">
+            <mat-option *ngFor="let item of listBranchOffice" [value]="item.idBranchOffice">
+              {{item.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Cantidad</mat-label>
+          <input matInput  formControlName="itemQuantity" autocomplete="off" type="number">
+        </mat-form-field>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+    <button mat-raised-button color="primary" (click)="guardarItem()">Agregar Elemento</button>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+</div>
