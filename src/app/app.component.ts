@@ -6,7 +6,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import { Technician } from './interfaces/technician';
 import { TechnicianService } from './services/technician.service';
 
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatDialog} from '@angular/material/dialog';
 import { DialogAddeditComponent } from './dialogs/dialog.addedit/dialog.addedit.component';
 import { ApiresponseResult } from './interfaces/apiresponse.result'
 import { TechnicianUpdate } from './interfaces/technician.update';
